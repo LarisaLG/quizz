@@ -34,23 +34,31 @@ def start_game():
         print(key)
         print(answers_list[ind])
         while True:
-            user_answer = input("Pick an answer from (A, B, C, or D): ")
+            user_answer = input("Pick an answer from (A, B, C, or D): ").upper()
             if user_answer.lower() not in choise_list:
                 print("Not an appropriate choice.")
             else:
                 break
 
         answers.append(user_answer)
+
+        answer = question_set.get(key)
+        print(f"Correct answer is: {(answer)}")
+        cor_answers += check_answer(answer, user_answer)
     print(answers)
 
 
-game = start_game()
+def check_answer(answer, user_answer):
+    """
+    Checks if user input is correct and counts correct answers
+    """
+    if answer == user_answer:
+        print("CORRECT ANSWER!")
 
-print(game)
-
-
-# check_answer()
-# check user input
+        return 1
+    else:
+        print("YOU'RE WRONG!")
+        return 0
 
 
 # count_cor_answers()
@@ -63,3 +71,15 @@ print(game)
 
 # new_game()
 # ask the user if he wants to play again
+
+
+def main():
+    """
+     Run all programm functions
+    """
+
+    start_game()
+
+
+
+main()
