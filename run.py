@@ -43,9 +43,11 @@ def start_game():
         answers.append(user_answer)
 
         answer = question_set.get(key)
-        print(f"Correct answer is: {(answer)}")
+        # print(f"Correct answer is: {(answer)}")
         cor_answers += check_answer(answer, user_answer)
-    print(answers)
+ 
+    show_results(cor_answers, answers)
+    # print(answers)
 
 
 def check_answer(answer, user_answer):
@@ -61,12 +63,23 @@ def check_answer(answer, user_answer):
         return 0
 
 
-# count_cor_answers()
-# count correct user answers
+def show_results(cor_answers, answers):
+    """
+    displays quiz results and user given results
+    """
 
+    print("\n")
+    print("QUIZ RESULTS")
+    print("\n")
 
-# show_results()
-# print results for user
+    print("Correct answers:")
+    for key, val in question_set.items():
+        print(val, end=' ')
+    print("\n")
+
+    print("User answers:")
+    print(' '.join(answers))
+    print("\n")
 
 
 # new_game()
