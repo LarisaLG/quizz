@@ -1,3 +1,5 @@
+import welcome_screen
+
 # Quiz questions
 question_set = {
             "1. The wind velocity is measured by which instrument?": "B",
@@ -77,22 +79,31 @@ def show_results(cor_answers, answers):
         print(val, end=' ')
     print("\n")
 
-    print("User answers:")
+    print("Your answers:")
     print(' '.join(answers))
     print("\n")
 
 
-# new_game()
-# ask the user if he wants to play again
+def new_game():
+    #ask the user if he wants to play again
+    print("\n")
+   
+    #re_start = input("Do you want play again? (Y/N)").upper()
+        
+    if input("Do you want play again? (Y/N)").upper() == "Y":
+        start_game()
+    else:
+        print(f"Ok, thanks for playing!\n See you soon! Bye!")
 
 
 def main():
     """
      Run all programm functions
     """
-
+    welcome_screen.welcome_screen()
     start_game()
-
+    new_game()
+    
 
 
 main()
