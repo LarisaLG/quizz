@@ -1,24 +1,30 @@
 def welcome_screen():
     """
-    Welcome screen for the game. Generated with: https://www.ascii-art-generator.org/
+    Welcome screen for the game. \n
+    Generated with: https://www.ascii-art-generator.org/
     """
-    print( """
-                    ____  _    _ _____ ______   ____  _    _ ______  _____ _______ 
-                  / __ \| |  | |_   _|___  /   / __ \| |  | |  ____|/ ____|__   __|
-                 | |  | | |  | | | |    / /   | |  | | |  | | |__  | (___    | |   
-                 | |  | | |  | | | |   / /    | |  | | |  | |  __|  \___ \   | |   
-                 | |__| | |__| |_| |_ / /__   | |__| | |__| | |____ ____) |  | |   
-                  \___\_\\____/|_____/_____|    \___\_\ ____/|______|_____/   |_|
-
-  
-    """ )
+    print("""
+                   ____    _    _  _____   ______
+                  / __ \  | |  | | |_  _| |___  /
+                 | |  | | | |  | |  | |      / /
+                 | |  | | | |  | |  | |     / /
+                 | |__| | | |__| | _| |_   / /__ 
+                  \___\_\  \____/ |_____| /_____|
+    """)
 
 
 
     print("\n")
     print("Welcome to Quiz!\n")
+    print("\n")
     global name
-    name = input("Enter your name:").capitalize()
+    while True:
+        name = input("Enter your name:").capitalize()
+        if not name.isalnum():
+            print("Not an appropriate input.")
+        else:
+            break
+
     print(f"Let's start quiz, {name}!")
     print("\n")
     return name

@@ -20,16 +20,15 @@ answers_list = [
             "C. Practice place for the martial artists\nD. Tourism purposes\n"
         ]
 
+answers = []
+choise_list = ['a', 'b', 'c', 'd']
 
 def start_game():
     """
     Displays a question with a multiple answers
     and wait response from user
     """
-
-    answers = []
     cor_answers = 0
-    choise_list = ['a', 'b', 'c', 'd']
 
     for ind, key in enumerate(question_set):
         print("\n")
@@ -45,11 +44,10 @@ def start_game():
         answers.append(user_answer)
 
         answer = question_set.get(key)
-        # print(f"Correct answer is: {(answer)}")
+
         cor_answers += check_answer(answer, user_answer)
- 
+
     show_results(cor_answers, answers)
-    # print(answers)
 
 
 def check_answer(answer, user_answer):
@@ -58,8 +56,8 @@ def check_answer(answer, user_answer):
     """
     if answer == user_answer:
         print("CORRECT ANSWER!")
-
         return 1
+
     else:
         print("YOU'RE WRONG!")
         return 0
@@ -69,8 +67,6 @@ def show_results(cor_answers, answers):
     """
     displays quiz results and user given results
     """
-
-    print("\n")
     print("QUIZ RESULTS")
     print("\n")
 
@@ -83,17 +79,21 @@ def show_results(cor_answers, answers):
     print(' '.join(answers))
     print("\n")
 
+    new_game()
+
 
 def new_game():
-    #ask the user if he wants to play again
+    """
+    Ask the user if he wants to play again
+    """
     print("\n")
-   
-    #re_start = input("Do you want play again? (Y/N)").upper()
         
-    if input("Do you want play again? (Y/N)").upper() == "Y":
+    if input("Do you want play again? (Y/N): ").upper() == "Y":
+        answers.clear()
         start_game()
     else:
         print(f"Ok, thanks for playing!\n See you soon! Bye!")
+        welcome_screen.welcome_screen()
 
 
 def main():
@@ -102,8 +102,6 @@ def main():
     """
     welcome_screen.welcome_screen()
     start_game()
-    new_game()
-    
 
 
 main()
