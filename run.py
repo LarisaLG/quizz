@@ -1,4 +1,7 @@
+from termcolor import colored
+
 import welcome_screen
+
 
 # Quiz questions
 question_set = {
@@ -23,6 +26,7 @@ answers_list = [
 answers = []
 choise_list = ['a', 'b', 'c', 'd']
 
+
 def start_game():
     """
     Displays a question with a multiple answers
@@ -35,9 +39,10 @@ def start_game():
         print(key)
         print(answers_list[ind])
         while True:
-            user_answer = input("Pick an answer from (A, B, C, or D): ").upper()
+            user_answer = input("Pick an answer from (A, B, C, or D): ")\
+                .upper()
             if user_answer.lower() not in choise_list:
-                print("Not an appropriate choice.")
+                print(colored("Not an appropriate choice.", 'yellow'))
             else:
                 break
 
@@ -55,11 +60,11 @@ def check_answer(answer, user_answer):
     Checks if user input is correct and counts correct answers
     """
     if answer == user_answer:
-        print("CORRECT ANSWER!")
+        print(colored("CORRECT ANSWER!", 'green'))
         return 1
 
     else:
-        print("YOU'RE WRONG!")
+        print(colored("YOU'RE WRONG!", 'red'))
         return 0
 
 
@@ -67,17 +72,21 @@ def show_results(cor_answers, answers):
     """
     displays quiz results and user given results
     """
+    print("\n")
     print("QUIZ RESULTS")
     print("\n")
 
-    print("Correct answers:")
+    print(colored("Correct answers:", 'blue'))
     for key, val in question_set.items():
         print(val, end=' ')
     print("\n")
 
-    print("Your answers:")
+    print(colored("Your answers:", 'cyan'))
     print(' '.join(answers))
     print("\n")
+    user_scores = int((cor_answers/len(question_set))*100)
+    print(f"So, {(welcome_screen.name)} you answered {(user_scores)}% \
+of the questions correctly")
 
     new_game()
 
@@ -87,7 +96,7 @@ def new_game():
     Ask the user if he wants to play again
     """
     print("\n")
-        
+
     if input("Do you want play again? (Y/N): ").upper() == "Y":
         answers.clear()
         start_game()
