@@ -1,5 +1,4 @@
 from termcolor import colored
-
 import welcome_screen
 
 
@@ -36,7 +35,7 @@ def start_game():
 
     for ind, key in enumerate(question_set):
         print("\n")
-        print(key)
+        print(colored(key, 'cyan'))
         print(answers_list[ind])
         while True:
             user_answer = input("Pick an answer from (A, B, C, or D): ")\
@@ -90,6 +89,7 @@ def show_results(cor_answers, answers):
     print(colored(f"So, {(welcome_screen.name)} you answered {(user_scores)}% \
 of the questions correctly", 'cyan'))
     print(colored(f"Number of correct answers is: {(cor_answers)} / {(len(question_set))}", 'cyan'))
+    
     new_game()
 
 
@@ -100,10 +100,11 @@ def new_game():
     print("\n")
 
     if input("Do you want play again? (Y/N): ").upper() == "Y":
+        print("\n")
         answers.clear()
         start_game()
     else:
-        print(f"Ok, thanks for playing!\n See you soon! Bye!")
+        print(f"Ok, thanks for playing!\nSee you soon! Bye!")
         welcome_screen.welcome_screen()
 
 

@@ -1,31 +1,110 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# QUIZ
 
-Welcome LarisaLG,
+This quiz is a simple game played on the command line. This is a quiz with multiple choice general knowledge questions.
+Users can try to guess the answer by inputting letter as an answer.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+You can view the live site here - [QUIZZ](https://quizz-quest.herokuapp.com/).
 
-## Reminders
+![The quiz preview at different resolutions](assets/docs/amiresponsive_screen.png "The quiz preview")
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## Contents
 
-## Creating the Heroku app
++ [User Experience](#user-experience)
+  + [User Stories](#user-stories)
+  + [Flowchart](#flowchart)
+  + [Design](#design)
++ [Features](#features)
+  + [Start](#start)
+  + [Playing The Game](#playing-the-game)
+  + [Quiz Results](#quiz-results)
+  + [End of Game](#end-of-game)
++ [Tecnologies Used](#technologies-used)
+- [Testing](#testing)
+- [Bugs](#bugs)
+- [Deployment](#deployment)
+- [Credits](#credits)
+- [Acknowledgements](#acknowledgements)
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+## User Experience
 
-1. `heroku/python`
-2. `heroku/nodejs`
+### User Stories
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
++ As a user I want to understand how the game works.
++ As a user I want to have fun and test my knowledge
++ As a user I want to know the result of the game
++ As a user I want to be able to restart the game
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+[Back to top](#contents)
 
-Connect your GitHub repository and deploy as normal.
+### How to play
 
-## Constraints
+The quiz is made similar to those that can often be found on the Internet.
+The quiz is made by analogy with those that can often be found on the Internet.
+Game logic should be intuitive to the user.
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
++ The program presents one by one general knowledges questions and multiple answers below question
 
------
-Happy coding!
++ The player then chooses and input letter that he/she thinks will be apropriate for an aswer
+
++ After cycling through all questions the program presents results of game displaing correct answers and user answers in appropriate named rows
+
++ Then the game offers to player play again and otherwise return to the start screen.
+
+[Back to top](#contents)
+
+### Flowchart
+
+As this game is played in the console I did a simple flowchart to get a map for that how I wanted it to work.
+
+![Flowchart](assets/docs/quiz_flowchart.png)
+
+### Design
+
+As the quiz takes place through the terminal, I've highlighted the messages in color for the user to better understand the progress of the game and the results of the quiz.
+
+[Back to top](#contents)
+
+## Features
+
+### Start
+
+When the quiz starts, the user sees a start screen with logo and prompts for enter a name
+
+![Start screen](assets/docs/start_screen.png)
+
+### Playing the quiz
+
++ When playing the quiz you receive message in green when the guess is correct.
++ If you guess wrong you receive message in red color
+
+![In play](assets/docs/quiz_flow.png)
+
+### Quiz Results
+
+When the quiz is finished the quiz results will be presented to the user so that he can compare the correct answers and his own answers. The result of the quiz will also be shown in percentage and quantitative terms.
+
+![Quiz results](assets/docs/quiz_results.png)
+
+### End of quiz
+
++ User can choose if he/she wants to play again or return to main screen.
+
+![Quiz finish](assets/docs/quiz_finish.png)
+
++ If user choose quit quiz the thank message displayed for user and quiz returns start screen.
+
+![End of game](assets/docs/quiz_thank_message.png)
+
+[Back to top](#contents)
+
+
+## Technologies Used
+
++ [Figma](https://www.figma.com/) was used to create the flowchart
++ [Gitpod](https://www.gitpod.io/) was used to create all files with code
++ [Python](https://www.python.org/)
++ [GitHub](https://github.com/) was used for storing the code repository
++ [Heroku](https://heroku.com/) was used to deploy the program live version
++ [Am I Responsive](http://ami.responsivedesign.is/) to generate an image showcasing the game responsivness to different screen sizes
+
+[Back to top](#contents)
