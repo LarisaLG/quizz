@@ -73,10 +73,11 @@ def show_results(cor_answers, answers):
     displays quiz results and user given results
     """
     print("\n")
+    print("************************")
     print("QUIZ RESULTS")
-    print("\n")
+    print("************************")
 
-    print(colored("Correct answers:", 'blue'))
+    print(colored("Correct answers:", 'green'))
     for key, val in question_set.items():
         print(val, end=' ')
     print("\n")
@@ -84,10 +85,11 @@ def show_results(cor_answers, answers):
     print(colored("Your answers:", 'cyan'))
     print(' '.join(answers))
     print("\n")
-    user_scores = int((cor_answers/len(question_set))*100)
-    print(f"So, {(welcome_screen.name)} you answered {(user_scores)}% \
-of the questions correctly")
 
+    user_scores = int((cor_answers/len(question_set))*100)
+    print(colored(f"So, {(welcome_screen.name)} you answered {(user_scores)}% \
+of the questions correctly", 'cyan'))
+    print(colored(f"Number of correct answers is: {(cor_answers)} / {(len(question_set))}", 'cyan'))
     new_game()
 
 
