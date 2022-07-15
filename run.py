@@ -2,13 +2,14 @@
 Import necessary modules and scripts
 """
 import os
+import time
 from termcolor import colored
 import welcome_screen
 import questions
 
 
 answers = []
-choise_list = ['a', 'b', 'c', 'd']
+choise_list = ['A', 'B', 'C', 'D']
 
 
 def start_game():
@@ -25,7 +26,7 @@ def start_game():
         while True:
             user_answer = input("Pick an answer from (A, B, C, or D): ")\
                 .upper()
-            if user_answer.lower() not in choise_list:
+            if user_answer not in choise_list:
                 print(colored("Not an appropriate choice.", 'yellow'))
             else:
                 break
@@ -73,8 +74,8 @@ def show_results(cor_answers, answers):
     user_scores = int((cor_answers/len(questions.question_set))*100)
     print(colored(f"So, {(welcome_screen.name)} you answered {(user_scores)}% \
 of the questions correctly", 'cyan'))
-    print(colored(f"Number of correct answers is: {(cor_answers)} / {(len(questions.question_set))}", 'cyan'))
-    
+    print(colored(f"Number of correct answers is: {(cor_answers)} / \
+{(len(questions.question_set))}", 'cyan'))
     new_game()
 
 

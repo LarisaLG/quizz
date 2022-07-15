@@ -23,8 +23,8 @@ answers_list = [
             "A. Trade route\nB. Protection against Mongolians and Invaders\n"
             "C. Practice place for the martial artists\nD. Tourism purposes\n",
             "A. Netherlands\nB. Poland\nC. Norway\nD. Denmark",
-            "A. Depends upon weather\nB.Yes\nC. No\nD. Sometimes",
-            "A. Plants living in water\nB.People working in the offices\n"
+            "A. Depends upon weather\nB. Yes\nC. No\nD. Sometimes",
+            "A. Plants living in water\nB. People working in the offices\n"
             "C. Animals living in plants\nD. Very small plants and animals "
             "living in water",
             "A. Ireland\nB. Netherland\nC. Nigeria\nD. None of the above",

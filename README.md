@@ -87,7 +87,7 @@ When the quiz is finished the quiz results will be presented to the user so that
 
 ### End of quiz
 
-+ User can choose if he/she wants to play again or return to main screen.
++ User can choose if he/she wants to play quiz again.
 
 ![Quiz finish](assets/docs/quiz_finish.png)
 
@@ -121,7 +121,11 @@ This project has been tested manually for the most part. Mostly by myself playin
 
 Code validation done with [PEP8 online](http://pep8online.com/).
 
+Initially, there were several warnings about trailing spaces, indentation, and lines that were too long. But after fixes now it passes without any warnings or errors.
 
+![PEP8 run.py validation](assets/docs/run_validation.png) 
+
+![PEP8 run.py validation](assets/docs/welcome_screen_validation.png)
 
 [Back to top](#contents)
 
