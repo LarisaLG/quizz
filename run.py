@@ -1,27 +1,11 @@
+"""
+Import necessary modules and scripts
+"""
 import os
 from termcolor import colored
 import welcome_screen
+import questions
 
-
-# Quiz questions
-question_set = {
-            "1. The wind velocity is measured by which instrument?": "B",
-            "2. The Red planet is called after which planet?": "B",
-            "3. Name the highest mountain in Africa?": "C",
-            "4. Which river is known to be the longest on earth?": "D",
-            "5. Why was the Great Wall of China build for?": "B"
-            }
-
-# Answer options for questions
-answers_list = [
-            "A. Barometer\nB. Anemometer\nC. Hygrometer\nD. Velocity meter\n",
-            "A. Mercury\nB. Mars\nC. Jupiter\nD. Saturn\n",
-            "A. Mount Kenya\nB. Mount Stanley\nC. Mount Kilimanjaro\n"
-            "D. Atlas Mountains\n",
-            "A. Niger River\nB. Lena River\nC. Congo River\nD. Nile River\n",
-            "A. Trade route\nB. Protection against Mongolians and Invaders\n"
-            "C. Practice place for the martial artists\nD. Tourism purposes\n"
-        ]
 
 answers = []
 choise_list = ['a', 'b', 'c', 'd']
@@ -34,10 +18,10 @@ def start_game():
     """
     cor_answers = 0
 
-    for ind, key in enumerate(question_set):
+    for ind, key in enumerate(questions.question_set):
         print("\n")
         print(colored(key, 'cyan'))
-        print(answers_list[ind])
+        print(questions.answers_list[ind])
         while True:
             user_answer = input("Pick an answer from (A, B, C, or D): ")\
                 .upper()
@@ -48,7 +32,7 @@ def start_game():
 
         answers.append(user_answer)
 
-        answer = question_set.get(key)
+        answer = questions.question_set.get(key)
 
         cor_answers += check_answer(answer, user_answer)
 
@@ -78,7 +62,7 @@ def show_results(cor_answers, answers):
     print("************************")
 
     print(colored("Correct answers:", 'green'))
-    for key, val in question_set.items():
+    for key, val in questions.question_set.items():
         print(val, end=' ')
     print("\n")
 
@@ -86,10 +70,10 @@ def show_results(cor_answers, answers):
     print(' '.join(answers))
     print("\n")
 
-    user_scores = int((cor_answers/len(question_set))*100)
+    user_scores = int((cor_answers/len(questions.question_set))*100)
     print(colored(f"So, {(welcome_screen.name)} you answered {(user_scores)}% \
 of the questions correctly", 'cyan'))
-    print(colored(f"Number of correct answers is: {(cor_answers)} / {(len(question_set))}", 'cyan'))
+    print(colored(f"Number of correct answers is: {(cor_answers)} / {(len(questions.question_set))}", 'cyan'))
     
     new_game()
 
@@ -105,8 +89,9 @@ def new_game():
         answers.clear()
         start_game()
     else:
+        print("\n")
         print(f"Ok, thanks for playing!\nSee you soon! Bye!")
-        #welcome_screen.welcome_screen()
+        time.sleep(5)
         os.system('clear')
 
 

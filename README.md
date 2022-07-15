@@ -106,6 +106,7 @@ When the quiz is finished the quiz results will be presented to the user so that
 + [GitHub](https://github.com/) was used for storing the code repository
 + [Heroku](https://heroku.com/) was used to deploy the program live version
 + [Am I Responsive](http://ami.responsivedesign.is/) to generate an image showcasing the game responsivness to different screen sizes
++ Termcolor module is used for color formatting for output in the terminal
 
 [Back to top](#contents)
 
