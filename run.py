@@ -1,3 +1,4 @@
+import os
 from termcolor import colored
 import welcome_screen
 
@@ -105,7 +106,8 @@ def new_game():
         start_game()
     else:
         print(f"Ok, thanks for playing!\nSee you soon! Bye!")
-        welcome_screen.welcome_screen()
+        #welcome_screen.welcome_screen()
+        os.system('clear')
 
 
 def main():
