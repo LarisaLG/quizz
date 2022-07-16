@@ -19,8 +19,8 @@ You can view the live site here - [QUIZZ](https://quizz-quest.herokuapp.com/).
   + [Quiz Results](#quiz-results)
   + [End of Game](#end-of-game)
 + [Tecnologies Used](#technologies-used)
-- [Testing](#testing)
-- [Bugs](#bugs)
++ [Testing](#testing)
++ [Bugs](#bugs)
 + [Deployment](#deployment)
 + [Credits](#credits)
 + [Acknowledgements](#acknowledgements)
@@ -91,9 +91,9 @@ When the quiz is finished the quiz results will be presented to the user so that
 
 ![Quiz finish](assets/docs/quiz_finish.png)
 
-+ If user choose quit quiz the thanks message displayed for user and quiz returns start screen.
++ If the user chooses to quit the quiz, a thank you message is displayed to the user and the quiz quiz screen is cleared.
 
-![End of game](assets/docs/quiz_thank_message.png)
+![End of game](assets/docs/quiz_thanks_message.png)
 
 [Back to top](#contents)
 
@@ -160,12 +160,13 @@ Steps to deploy are as follows:
 [Back to top](#contents)
 
 ## Credits
++ Code institute for the deployment terminal
 
-- [Bro Code YouTube tutorial](https://youtu.be/yriw5Zh406s) and [Mike Dane YouTube tutorial](https://youtu.be/SgQhwtIoQ7o) were helpful for inspiration when setting up the basic structure of the quiz.
-- StackOverFlow- [help with colored output with Python](https://stackoverflow.com/questions/39473297/how-do-i-print-colored-output-with-python-3)
-- [ASCII Art Generator](https://www.developmenttools.com/ascii-art-generator/) - for logo for quiz start screen.
-- [W3schools.com](https://www.w3schools.com/python/default.asp)
-- [Real Python](https://realpython.com/)
++ [Bro Code YouTube tutorial](https://youtu.be/yriw5Zh406s) and [Mike Dane YouTube tutorial](https://youtu.be/SgQhwtIoQ7o) were helpful for inspiration when setting up the basic structure of the quiz.
++ StackOverFlow- [help with colored output with Python](https://stackoverflow.com/questions/39473297/how-do-i-print-colored-output-with-python-3)
++ [ASCII Art Generator](https://www.developmenttools.com/ascii-art-generator/) - for logo for quiz start screen.
++ [W3schools.com](https://www.w3schools.com/python/default.asp)
++ [Real Python](https://realpython.com/)
 
 [Back to top](#contents)
 
@@ -175,3 +176,5 @@ This quiz was made as the Porfolio Project 3 for the Diploma in Software Develop
 
 Many thanks to my mentor Martina Terlevich for supporting me in the project and prompt answers to my questions.
 Also I would like to thank the community at Code Institutes Slack channels.
+
+[Back to top](#contents)
